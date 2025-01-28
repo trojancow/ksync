@@ -202,7 +202,7 @@ func (app *CosmosApp) StartBinary(snapshotInterval int64) error {
 	cmd.Args = append(cmd.Args, "start",
 		"--home",
 		app.homePath,
-		"--with-tendermint=false",
+		"--with-cometbft=false",
 		"--address",
 		app.ConsensusEngine.GetProxyAppAddress(),
 	)
