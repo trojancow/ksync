@@ -477,8 +477,6 @@ func (app *CosmosApp) LoadConsensusEngine() error {
 						return cometbft_v37.NewEngine(app.homePath)
 					} else if strings.Contains(dependency[1], "0.38.") {
 						return cometbft_v38.NewEngine(app.homePath)
-					} else {
-						return nil, fmt.Errorf("failed to find engine in binary dependencies")
 					}
 				}
 			}
